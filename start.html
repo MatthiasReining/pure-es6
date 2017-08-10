@@ -2,7 +2,8 @@
 
 <h2>T-Rendering</h2>
 <input type="text" data-model="bp.firstname"><br>
-<label>Firstname (T-OUTPUT):</label><t-output-ctrl data-model="bp.firstname" id="outTest"></t-output-ctrl><br>
+<label>Firstname (T-OUTPUT):</label>
+<t-output-ctrl data-model="bp.firstname" id="outTest"></t-output-ctrl><br>
 <label>Firstname2:</label><span data-model="bp.firstname"></span><br>
 <strong>Ausgabe:</strong> <span data-model="x.test1"></span><br><br>
 <button onclick="state.model.bp.firstname='Mickey';updateUI()">update firstname</button>
@@ -10,9 +11,12 @@
 <hr>
 <h2>T-INPUT-CTRL</h2>
 
-<t-input-ctrl data-def='{"label": "Firstname", "model": "bp.firstname"}' id="inputTest"></t-input-ctrl><br>
-<t-input-ctrl def='{"model": "test1"}'></t-input-ctrl><br>
-<t-input-ctrl data-def='{"label": "Lastname", "model": "bp.lastname"}'></t-input-ctrl><br>
+
+        <t-input-ctrl data-def='{"label": "Firstname", "model": "bp.firstname"}' id="inputTest"></t-input-ctrl><br>
+        <t-input-ctrl def='{"model": "test1"}'></t-input-ctrl><br>
+        <t-input-ctrl data-def='{"label": "Lastname", "model": "bp.lastname"}'></t-input-ctrl><br>
+
+
 <hr>
 <h1>CONTENT-AREA</h1>
 <button onclick="renderContract()">render Contract</button>

@@ -1,15 +1,16 @@
 <template id="tmpl-t-input-ctrl">
-  
-  <label><b>${this.def.label}</b></label>: <input type="text" data-model="${this.def.model}"> ${this.def.model}
-    <br>
-<!--
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+  <!--<label><b>${this.def.label}</b></label>: <input type="text" data-model="${this.def.model}"> ${this.def.model}
+    <br>-->
+
     <div class="mdc-form-field">
         <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-            <input id="lastname" type="text" class="mdc-textfield__input" data-model="${this.def.model}">
-            <label for="lastname" class="mdc-textfield__label">
+            <input id="${this.def.model}" type="text" class="mdc-textfield__input" data-model="${this.def.model}">
+            <label for="${this.def.model}" class="mdc-textfield__label">
                 ${this.def.label}
               </label>
         </div>
-    </div>-->
+    </div>
 </template>
 <script src="t-input-ctrl.js"></script>

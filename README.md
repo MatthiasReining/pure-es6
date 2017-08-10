@@ -4,6 +4,7 @@ I'm curious to see when I'm running in restrictions.
 Topics: 
 
 - two-way-value binding
+- central state
 - templating
 - modular project structure
 - routing
@@ -12,4 +13,4 @@ Topics:
 
 Start with 
 
-    browser-sync start -s -f "."
+    browser-sync start --server --files "*.js, *.html"

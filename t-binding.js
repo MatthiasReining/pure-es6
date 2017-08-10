@@ -40,7 +40,7 @@ function addTBinding(el) {
     console.log('addTBinding');
     if (!el.dataIsBound)
         el.addEventListener("keyup", function () {
-            console.log(el);
+            //console.log(el);
             let modelPath = el.getAttribute("data-model");
             if (modelPath == undefined) {
                 extractAttrsAsJSON(el);

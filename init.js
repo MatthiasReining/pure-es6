@@ -63,14 +63,11 @@ function loadTemplate(resource, htmlElem) {
             let template2 = eval("`" + template + "`;");
             let tmplContainer = document.createElement("template");
             tmplContainer.innerHTML = template2;
-            var template3 = tmplContainer;
-
-            let clone = currentDocument.importNode(template3.content, true);
             htmlElem.innerHTML = template2;
 
             mdc.autoInit();
-            
-             //add T-Bindings   
+
+            //add T-Bindings   
             addTBindings();
 
         });
@@ -96,5 +93,3 @@ function extractAttrsAsJSON(htmlElement) {
         htmlElement[attrName] = JSON.parse(v);
     }
 }
-
-console.log('globalVar (in init.js): ' + globalVar);
