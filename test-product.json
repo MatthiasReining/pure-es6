@@ -1,0 +1,258 @@
+{
+    "key": "VHV-2015",
+    "name": "Hausrat",
+    "version": "09/2015",
+    "tariff": {
+        "key": "VHV"
+    },
+    "businessTransactions": [],
+    "administrativeData": {
+        "automaticRenewal": true,
+        "automaticRenewalData": {
+            "daysBefore": 30,
+            "renewalPeriod": "1y"
+        },
+        "paymentInterval": [
+            {
+                "key": "1",
+                "name": "JÃ¤hrlich"
+            }
+        ],
+        "attributes": {}
+    },
+    "salesProduct": {
+        "key": "HR",
+        "name": "Hausrat (SP)",
+        "attributes": {
+            "PACKAGE": {
+                "key": "PACKAGE",
+                "name": "Paket",
+                "dataType": "String",
+                "alwaysMandatory": true,
+                "selectOptions": [
+                    {
+                        "key": "BASIS",
+                        "name": "Basis"
+                    },
+                    {
+                        "key": "PLUS",
+                        "name": "Plus"
+                    }
+                ]
+            }
+        },
+        "products": {
+            "HR": {
+                "key": "HR",
+                "name": "Hausrat (P)",
+                "attributes": {},
+                "basicProducts": {
+                    "HR": {
+                        "key": "HR",
+                        "name": "Hausrat",
+                        "riskCalcData": [
+                            "BUILDING",
+                            "PERSONAL"
+                        ],
+                        "coverages": {
+                            "FEUER": {
+                                "key": "FEUER",
+                                "name": "Feuer"
+                            },
+                            "LEITUNGSWASSER": {
+                                "key": "LEITUNGSWASSER",
+                                "name": "Leitungswasser"
+                            },
+                            "EINBRUCHDIEBSTAHL": {
+                                "key": "EINBRUCHDIEBSTAHL",
+                                "name": "Einbruchdiebstahl"
+                            },
+                            "VANDALISMUS-EINBRUCH": {
+                                "key": "VANDALISMUS-EINBRUCH",
+                                "name": "Vandalismus nach einem Einbruch"
+                            },
+                            "RAUB": {
+                                "key": "RAUB",
+                                "name": "Raub"
+                            },
+                            "ELEMENTAR": {
+                                "key": "ELEMENTAR",
+                                "name": "ElementarschÃ¤den"
+                            },
+                            "STURM-HAGEL": {
+                                "key": "STURM-HAGEL",
+                                "name": "Sturm und Hagel"
+                            }
+                        },
+                        "attributes": {
+                            "INSURED_SUM": {
+                                "key": "INSURED_SUM",
+                                "name": "Versicherungssumme",
+                                "dataType": "Number",
+                                "alwaysMandatory": true,
+                                "calculated": "(contract.riskCalcData.BUILDING.attributes.LIVING_AREA * 650)"
+                            },
+                            "DEDUCTIBLE": {
+                                "key": "DEDUCTIBLE",
+                                "name": "Selbstbeteiligung",
+                                "dataType": "Currency",
+                                "alwaysMandatory": true,
+                                "selectOptions": [
+                                    {
+                                        "key": 0,
+                                        "name": "keine"
+                                    },
+                                    {
+                                        "key": 150,
+                                        "name": "150 EUR",
+                                        "default": true
+                                    },
+                                    {
+                                        "key": 300,
+                                        "name": "300 EUR"
+                                    },
+                                    {
+                                        "key": 500,
+                                        "name": "500 EUR"
+                                    },
+                                    {
+                                        "key": 1000,
+                                        "name": "1.000 EUR"
+                                    },
+                                    {
+                                        "key": 2500,
+                                        "name": "2.500 EUR"
+                                    }
+                                ]
+                            }
+                        },
+                        "mandatory": true
+                    },
+                    "GLASS": {
+                        "key": "GLASS",
+                        "name": "Glas",
+                        "riskCalcData": [],
+                        "coverages": {
+                            "GEBAEUDE": {
+                                "key": "GEBAEUDE",
+                                "name": "GebÃ¤ude- und Mobiliarverglasungen"
+                            },
+                            "KOCHFLAECHE": {
+                                "key": "KOCHFLAECHE",
+                                "name": "Glaskeramik-KochflÃ¤chen und deren Abdeckungen"
+                            },
+                            "AQUARIEN": {
+                                "key": "AQUARIEN",
+                                "name": "Aquarien/Terrarien"
+                            }
+                        },
+                        "attributes": {
+                            "GLASS-TYPE": {
+                                "key": "GLASS-TYPE",
+                                "name": "GlasPlus oder Glas&FensterPlus",
+                                "dataType": "String",
+                                "alwaysMandatory": true,
+                                "selectOptions": [
+                                    {
+                                        "key": "GP",
+                                        "name": "GlasPlus",
+                                        "default": true
+                                    },
+                                    {
+                                        "key": "GFP",
+                                        "name": "Glas&FensterPlus"
+                                    }
+                                ]
+                            }
+                        },
+                        "mandatory": false
+                    },
+                    "BICYCLE": {
+                        "key": "BICYCLE",
+                        "name": "FahrradPlus",
+                        "riskCalcData": [],
+                        "attributes": {
+                            "BIKE-CATEGORY": {
+                                "key": "BIKE-CATEGORY",
+                                "name": "Fahrrad Typ",
+                                "dataType": "String",
+                                "alwaysMandatory": true,
+                                "selectOptions": [
+                                    {
+                                        "key": "NORMAL",
+                                        "name": "Normal (< 1.000EUR)"
+                                    },
+                                    {
+                                        "key": "EXPENSIVE",
+                                        "name": "Hochwertig (>1.000EUR)",
+                                        "default": true
+                                    }
+                                ]
+                            }
+                        },
+                        "coverages": {
+                            "DIEBSTAHL": {
+                                "key": "DIEBSTAHL",
+                                "name": "Diebstahl von FahrrÃ¤dern"
+                            }
+                        },
+                        "mandatory": false
+                    }
+                }
+            }
+        }
+    },
+    "riskCalcData": {
+        "BUILDING": {
+            "key": "BUILDING",
+            "name": "Wohnobjekt",
+            "attributes": {
+                "ZIP": {
+                    "key": "ZIP",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                },
+                "FLAT-TYPE": {
+                    "key": "FLAT-TYPE",
+                    "name": "Wohnungsart",
+                    "dataType": "String",
+                    "alwaysMandatory": true,
+                    "selectOptions": [
+                        {
+                            "key": "EFH",
+                            "name": "Einfamilienhaus"
+                        },
+                        {
+                            "key": "W-MFH-EGKG",
+                            "name": "Wohnung im Mehrfamilienhaus EG/KG"
+                        },
+                        {
+                            "key": "W-WFH-OG",
+                            "name": "Wohnung im Mehrfamilienhaus OG"
+                        }
+                    ]
+                },
+                "LIVING_AREA": {
+                    "key": "LIVING_AREA",
+                    "name": "WohnflÃ¤che (in mÂ²)",
+                    "dataType": "Number",
+                    "alwaysMandatory": true
+                }
+            }
+        },
+        "PERSONAL": {
+            "key": "PERSONAL",
+            "name": "PersÃ¶nliche Angaben",
+            "attributes": {
+                "BIRTHDAY": {
+                    "key": "BIRTHDAY",
+                    "name": "Geburtstag",
+                    "dataType": "Date",
+                    "alwaysMandatory": true,
+                    "calculated": "(contract.administrativeData.policyHolder.birthday)"
+                }
+            }
+        }
+    }
+}

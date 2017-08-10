@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+body{
+  font-family: "Lato";
+  font-weight: 300;
+}
+h1{
+  // ATTN: styles won't bleed to shadow DOM
+  color: darkviolet;
+}
+input{
+  // This won't make it to the input in the Shadow DOM:
+  color: red!important;
+}
+
