@@ -4,9 +4,27 @@
 <input type="text" data-model="bp.firstname"><br>
 <label>Firstname (T-OUTPUT):</label>
 <t-output-ctrl data-model="bp.firstname" id="outTest"></t-output-ctrl><br>
-<label>Firstname2:</label><span data-model="bp.firstname"></span><br>
-<strong>Ausgabe:</strong> <span data-model="x.test1"></span><br><br>
+<label>Firstname:</label><span data-model="bp.firstname"></span><br>
 <button onclick="state.model.bp.firstname='Mickey';updateUI()">update firstname</button>
+<hr>
+
+<hr>
+<ul>
+    ${['v1', 'v2', 'v2'].map(e => `
+    <li>${e}</li>
+    `).join('')}
+
+    <li>---</li>    
+${state.modelDef.salesProduct.products.HR.basicProducts.GLASS.attributes['GLASS-TYPE'].selectOptions.map(e => `
+    <li>${e.name}</li>
+    `).join('')}
+
+    <li>---</li>
+    ${ Object.entries(state.modelDef.salesProduct.products.HR.basicProducts.HR.attributes).map( ([v, k]) => `
+        <li>${k.name}</li>
+    `).join('')}
+
+</ul>
 
 <hr>
 <h2>T-INPUT-CTRL</h2>

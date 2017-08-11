@@ -5,7 +5,6 @@ var state = {
 };
 var jsonPath = new JsonPath(state.model);
 
-
 (function () {
     if ('registerElement' in document
         && 'import' in document.createElement('link')
@@ -29,6 +28,12 @@ var jsonPath = new JsonPath(state.model);
         console.log(data);
         state.modelDef = data;
         console.log(state);
+
+        var con = '';
+        console.log(state.modelDef.salesProduct.products.HR.basicProducts.HR.attributes);
+
+       
+        Object.entries(state.modelDef.salesProduct.products.HR.basicProducts.HR.attributes).forEach(([v, k]) => console.log(v));
 
         loadTemplate('start.html', document.querySelector('main'));
     }).catch(function (error) {
