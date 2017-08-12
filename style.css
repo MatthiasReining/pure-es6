@@ -1,4 +1,7 @@
+/** old stuff */
+
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
 body{
   font-family: "Lato";
   font-weight: 300;
@@ -12,3 +15,17 @@ input{
   color: red!important;
 }
 
+
+
+
+/* component */
+header .mdc-toolbar__title:first-child {
+  margin-left: 24px;
+}
+header .mdc-toolbar__title {
+  margin-left: 10px;
+}
+header .mdc-toolbar__title a {
+  text-decoration-line: none;
+  color: white;
+}

@@ -193,7 +193,7 @@
                         "coverages": {
                             "DIEBSTAHL": {
                                 "key": "DIEBSTAHL",
-                                "name": "Diebstahl von FahrrÃ¤dern"
+                                "name": "Diebstahl von Fahrrädern"
                             }
                         },
                         "mandatory": false
@@ -213,8 +213,8 @@
                     "dataType": "String",
                     "alwaysMandatory": true
                 },
-                "FLAT-TYPE": {
-                    "key": "FLAT-TYPE",
+                "FLAT_TYPE": {
+                    "key": "FLAT_TYPE",
                     "name": "Wohnungsart",
                     "dataType": "String",
                     "alwaysMandatory": true,
@@ -235,7 +235,7 @@
                 },
                 "LIVING_AREA": {
                     "key": "LIVING_AREA",
-                    "name": "WohnflÃ¤che (in mÂ²)",
+                    "name": "Wohnfläche (in m²)",
                     "dataType": "Number",
                     "alwaysMandatory": true
                 }
@@ -243,7 +243,7 @@
         },
         "PERSONAL": {
             "key": "PERSONAL",
-            "name": "PersÃ¶nliche Angaben",
+            "name": "Perönliche Angaben",
             "attributes": {
                 "BIRTHDAY": {
                     "key": "BIRTHDAY",

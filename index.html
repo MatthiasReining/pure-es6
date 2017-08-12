@@ -6,6 +6,10 @@
     <title>PLAIN ES6. Web components and Shadow DOM</title>
 
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="style.css">
 
@@ -14,12 +18,33 @@
 </head>
 
 
-<body>
-    
-    <main>loading...</main>
+<body class="mdc-typography">
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--fixed-lastrow-only">
+        <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <!--<a href="#" class="material-icons mdc-toolbar__icon--menu">menu</a> -->
+                <span class="mdc-toolbar__title"><a href="#"><i class="material-icons">home</i></a></span>
+                <span class="mdc-toolbar__title"><a href="#">insurance11</a></span>
+                <span class="mdc-toolbar__title"><i class="material-icons">chevron_right</i></span>
+                <span class="mdc-toolbar__title"><a href="#">demo</a></span>
+
+            </section>
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+                <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
+                <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Print this page" alt="Print this page">print</a>
+                <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">more_vert</a>
+            </section>
+        </div>
+    </header>
+
+    <br><br><br><br><br>
+    <main id="main">loading...</main>
+
+    <hr>
+    <pre data-model=""></pre>
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    
+
     <script src="jsonpath.js"></script>
     <script src="t-binding.js"></script>
     <script src="init.js"></script>

@@ -1,0 +1,33 @@
+<div class="mdc-card">
+    <section class="mdc-card__primary">
+        <h1 class="mdc-card__title mdc-card__title--large">Verwaltungsdaten</h1>
+    </section>
+    <section class="mdc-card__supporting-text">
+
+        <t-input-ctrl data-def='{"label": "Vertragsbeginn", "model": "validFrom"}'></t-input-ctrl>
+        <t-input-ctrl data-def='{"label": "Vertragsdauer", "model": "administrativeData.contractDuration"}'></t-input-ctrl>
+        <t-input-ctrl data-def='{"label": "Versicherungsnehmer", "model": "administrativeData.policyHolder"}'></t-input-ctrl>
+        <t-input-ctrl data-def='{"label": "Rechnungsempfänger", "model": "administrativeData.invoiceRecipientIsPolicyHolder"}'></t-input-ctrl>
+
+    </section>
+</div>
+
+<div class="mdc-card">
+    <section class="mdc-card__primary">
+        <h1 class="mdc-card__title mdc-card__title--large">Daten zur Risikobewertung</h1>
+    </section>
+    <section class="mdc-card__supporting-text">
+
+        ${getAllRiskCalcData().map(risk => `
+
+            <h3>${risk.name} (${risk.key})</h3>
+
+             ${ Object.entries(risk.attributes).map( ([attrKey, attr]) => `
+                <t-input-ctrl data-def='{"label": "${attr.name}", "model": "riskCalcData.${risk.key}.attributes.${attrKey}"}'></t-input-ctrl>
+
+             `).join('')}        
+
+        `).join('')}
+
+    </section>
+</div>
