@@ -1,6 +1,5 @@
 'use strict';
 
-
 function updateUI(el) {
     if (el == null)
         el = document;

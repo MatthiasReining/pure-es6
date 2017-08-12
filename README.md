@@ -8,7 +8,11 @@ Topics:
 - templating
 - modular project structure
 - routing
+- i18n
 
+
+Beside the ES6 check, it is also a check for MDC (material design components) as alternative for Bootstrap.
+The challeange for material design: form focused application (many input fields, as usual for enterprise applications).
 
 
 Start with 
