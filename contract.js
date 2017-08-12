@@ -12,8 +12,15 @@ function getAllRiskCalcData() {
     Object.entries(state.modelDef.riskCalcData).map( ([riskKey, risk]) => {
         console.log('riskKey');
         console.log(riskKey);
-        allRiskCalcData.push(risk);
+        if (!risk.deactivate)
+            allRiskCalcData.push(risk);
     });
     
     return allRiskCalcData;
+}
+
+function testModifyConditions() {
+    state.modelDef.riskCalcData.BUILDING.deactivate = !state.modelDef.riskCalcData.BUILDING.deactivate;
+    console.log('change risk data');
+    renderContract();
 }

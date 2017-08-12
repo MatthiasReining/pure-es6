@@ -12,7 +12,12 @@ class TInputCtrl extends HTMLElement {
 
         this.innerHTML = template2;
 
-        addTBindings(this.shadow);       
+        addTBindings(this.shadow);
+
+        let modelPath = this.model;
+        if (modelPath == undefined)
+            modelPath = this.def.model;
+        this.value = jsonPath.getValue(modelPath);        
     };
 
     get value() {
@@ -26,10 +31,7 @@ class TInputCtrl extends HTMLElement {
         return this.def;
     }
 
-    // Fires when an instance was inserted into the document.
-    adoptedCallback() {
-        console.log('in adoptedCallback');
-    }
+
     // Fires when an instance was removed from the document.
     disconnectedCallback() { };
     // Fires when an attribute was added, removed, or updated.
