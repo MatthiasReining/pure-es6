@@ -1,17 +1,12 @@
-
 function renderContract() {
-    console.log('renderContract');
-
     loadTemplate('new-contract.html', main);
 }
 
+
 function getAllRiskCalcData() {
     let allRiskCalcData = [];
-    console.log( state.modelDef.riskCalcData);
-
+   
     Object.entries(state.modelDef.riskCalcData).map( ([riskKey, risk]) => {
-        console.log('riskKey');
-        console.log(riskKey);
         if (!risk.deactivate)
             allRiskCalcData.push(risk);
     });
@@ -22,5 +17,13 @@ function getAllRiskCalcData() {
 function testModifyConditions() {
     state.modelDef.riskCalcData.BUILDING.deactivate = !state.modelDef.riskCalcData.BUILDING.deactivate;
     console.log('change risk data');
+    
+    let t = new Date().getTime();
+    let n = window.performance.now();
     renderContract();
+
+    let durationNs = window.performance.now() - n;
+    let duration = new Date().getTime() - t;
+    console.log('took ' + durationNs + ' ns');
+    console.log('took ' + duration + ' ms');
 }

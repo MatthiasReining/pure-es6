@@ -1,1 +1,3 @@
 .vscode/temp.sql
+bower_components
+node_modules

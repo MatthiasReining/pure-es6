@@ -206,9 +206,160 @@
         "BUILDING": {
             "key": "BUILDING",
             "name": "Wohnobjekt",
+            "n": 22,
             "attributes": {
                 "ZIP": {
                     "key": "ZIP",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP1": {
+                    "key": "ZIP1",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP2": {
+                    "key": "ZIP2",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP3": {
+                    "key": "ZIP3",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP4": {
+                    "key": "ZIP4",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP5": {
+                    "key": "ZIP5",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP6": {
+                    "key": "ZIP6",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP7": {
+                    "key": "ZIP7",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP8": {
+                    "key": "ZIP8",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP9": {
+                    "key": "ZIP9",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP10": {
+                    "key": "ZIP10",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP11": {
+                    "key": "ZIP11",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP12": {
+                    "key": "ZIP12",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP13": {
+                    "key": "ZIP13",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP14": {
+                    "key": "ZIP14",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP15": {
+                    "key": "ZIP15",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP16": {
+                    "key": "ZIP16",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP17": {
+                    "key": "ZIP17",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP18": {
+                    "key": "ZIP18",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP19": {
+                    "key": "ZIP19",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP20": {
+                    "key": "ZIP20",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP21": {
+                    "key": "ZIP11",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP22": {
+                    "key": "ZIP22",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP23": {
+                    "key": "ZIP23",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP24": {
+                    "key": "ZIP24",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP25": {
+                    "key": "ZIP25",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP26": {
+                    "key": "ZIP26",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP27": {
+                    "key": "ZIP27",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP28": {
+                    "key": "ZIP28",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP29": {
+                    "key": "ZIP29",
+                    "name": "PLZ",
+                    "dataType": "String",
+                    "alwaysMandatory": true
+                }, "ZIP30": {
+                    "key": "ZIP30",
                     "name": "PLZ",
                     "dataType": "String",
                     "alwaysMandatory": true
@@ -243,7 +394,8 @@
         },
         "PERSONAL": {
             "key": "PERSONAL",
-            "name": "Perönliche Angaben",
+            "name": "Perönliche Angaben <input></input>",
+            "n": 33,
             "attributes": {
                 "BIRTHDAY": {
                     "key": "BIRTHDAY",

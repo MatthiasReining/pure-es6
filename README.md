@@ -15,6 +15,10 @@ Beside the ES6 check, it is also a check for MDC (material design components) as
 The challeange for material design: form focused application (many input fields, as usual for enterprise applications).
 
 
+PRE install
+
+    bower install --save webcomponents/webcomponentsjs
+ 
 Start with 
 
     browser-sync start --server --files "*.js, *.html"

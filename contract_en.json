@@ -1,0 +1,80 @@
+{
+    "CONTRACT" : "Contract",
+    "NEW_PROPOSAL": "New proposal",    
+    "PRODUCT_NAME": "Product",
+    "POLICY_HOLDER": "Policy holder",
+    "INVOICE_RECIPIENT": "Invoice Recipient",
+    "ADMINISTRATIVE_DATA": "Administrative data",
+    "CONTRACT_START": "Contract start",
+    "AUTOMATIC_RENEWAL": "Automatic renewal",
+    "CONTRACT_DURATION": "contract duration",
+    "CONTRACT_VERSION_VALIDITY": "Contract version validity",
+    "CONTRACT_VERSION_CREATED": "Contract version created at",
+   
+    
+    "SUMMARY": "Summary",
+    
+    "CONTRACT_SALES_PRODUCT": "Contract bundle",
+    "CONTRACT_PRODUCT": "Product",
+    "CONTRACT_BASIC_PRODUCT": "Basic product",
+    "CONTRACT_DATA": "Contract data",
+    "CONTRACT_BASIC_PRODUCTS": "Basic products", 
+    "CONTRACT_DATA_TO_CALCULATE_RISK-long": "Data for calculating the risk",
+    "CONTRACT_DATA_TO_CALCULATE_RISK": "Risk calculation",
+    "CONTRACT_EXTENDED_DATA_TO_CALCULATE_RISK": "Extended data for calculating the risk.",
+    "CONTRACT_ATTRIBUTES": "Attributes",
+    "CONTRACT_PAYMENT_FREQUENCY": "Payment frequency",
+    "CONTRACT_DURATION_INFO": "{{months}} months",
+    "CONTRACT_RENEWAL_INFO": "(automatic policy renewal {{days}} days before expiration)",
+    "CONTRACT_NO_RENEWAL_INFO": "(wihtout automatic policy renewal)",
+
+    
+    "PREMIUM_DATA": "Premium",
+    "PREMIUM_GROSS": "Gross",
+    "PREMIUM_NET": "Net", 
+    "PREMIUM_TAX": "Tax",
+    "PREMIUM_REFRESH": "Recalculate",
+    "PREMIUM_TOTAL": "Total",
+
+    "CONTRACT_PAYMENT_ANNUAL": "Annual payment",
+    "CONTRACT_PAYMENT_SEMIANNUAL": "Semiannual payment",
+    "CONTRACT_PAYMENT_QUARTERLY": "Quarterly payment",
+    "CONTRACT_PAYMENT_MONTHLY": "Monthly payment",
+
+    "CONTRACT_ANNUAL_PREMIUM": "Annual premium",
+    
+    "INVOICE_RECIPIENT_IS_POLICY_HOLDER": "Invoice recipient is identically with policy holder.",
+    "BUTTON_SAVE_DRAFT": "Save Draft",
+    "BUTTON_ISSUE_PROPOSAL": "Issue Proposal",
+    "BUTTON_ISSUE_POLICY": "Issue Policy",
+    "BUTTON_CANCEL": "Cancel",
+    "BUTTON_DEBUG": "Debug",
+    
+    "ACTION_BTN_NEXT_CV_TITLE": "next contract version", 
+    "ACTION_BTN_FIRST_CV_TITLE": "first contract version", 
+    "ACTION_BTN_PREV_CV_TITLE": "previous contract version", 
+    "ACTION_BTN_LATEST_CV_TITLE": "last contract version",
+    "ACTION_BTN_TODAY": "Today",
+    "ACTION_BTN_TODAY_TITLE": "load contract version valid today",
+    
+    "JOURNAL_ISSUE_DATE": "Edited on",
+    "JOURNAL_CREATOR": "from",
+    "JOURNAL_DESCRIPTION": "reson",
+    "JOURNAL_VALID_FROM": "valid from",
+    "JOURNAL_PROCESS": "details",
+    "JOURNAL_CONTRACT_VERSION": "related contract version",
+    "JOURNAL_MODULE": "module",
+    
+    
+    "JRNL_ENDORSEMENT": "Endorsement",
+    "JRNL_ISSUE_POLICY": "New Policy",
+    
+    "JRNL_PORTFOLIO": "Portfolio",
+    "JRNL_ICE": "Process",
+    "JRNL_POLICYHOLDER": "Policy holder", 
+    "JRNL_INVOICERECIPIENT": "Invoice recipient",
+    "JRNL_CREATE_POLICY_DOC": "Policy paper created",
+    
+    
+    "test": "blub"
+}

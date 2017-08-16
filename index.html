@@ -9,12 +9,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <!--
+    <script src="bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>    
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+-->
+
+    <!--
+    <script src="bower_components/shadycss/scoping-shim.min.js"></script>
+    <script src="bower_components/shadycss/apply-shim.min.js"></script>
+    <script src="bower_components/shadycss/custom-style-interface.min.js"></script>
+-->
     
+<!--    <script src="bower_components/custom-elements/custom-elements.min.js"></script>-->
+
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="import" href="t-input-ctrl.html">
-    <script src="t-output-ctrl.js"></script>
+
+    <!--<link rel="import" href="t-input-ctrl.html">-->
+    <!--<link rel="import" href="t-output-ctrl.html">-->
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 </head>
 
 
@@ -38,17 +56,21 @@
     </header>
 
     <br><br><br><br><br>
+    <button onclick="bootstrapApp()">bootstrapApp</button>
     <main id="main">loading...</main>
 
     <hr>
     <pre data-model=""></pre>
 
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-
-    <script src="jsonpath.js"></script>
-    <script src="t-binding.js"></script>
-    <script src="init.js"></script>
-
-
+    
+<!--
+    <script src="src/jsonpath.js"></script>
+    <script src="src/t-binding.js"></script>
+    <script src="src/t-input-ctrl.js"></script>
+    <script src="src/init.js"></script>
+    <script src="src/contract.js"></script>
+-->
+    <script src="src/jsonpath.js"></script>
+    <script src="src/init.js"></script>
 
 </body>

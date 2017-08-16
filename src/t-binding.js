@@ -8,7 +8,11 @@ function updateUI(el) {
 
     dataBind.forEach(htmlElem => {
         let modelPath = htmlElem.getAttribute("data-model");
-        if (modelPath == undefined) {            
+        if (modelPath == undefined) {
+            console.log(htmlElem);
+            console.log(htmlElem.attributes);
+            console.log(htmlElem.modelDef);
+            console.log(htmlElem['data-def']);
             modelPath = htmlElem.modelDef.model;            
         }
         let val = jsonPath.getValue(modelPath);
@@ -36,10 +40,8 @@ function addTBindings(el) {
 }
 
 function addTBinding(el) {
-    console.log('addTBinding');
     if (!el.dataIsBound)
         el.addEventListener("keyup", function () {
-            //console.log(el);
             let modelPath = el.getAttribute("data-model");
             if (modelPath == undefined) {
                 extractAttrsAsJSON(el);

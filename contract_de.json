@@ -1,0 +1,104 @@
+{
+    "CONTRACT" : "Vertrag",
+    "NEW_PROPOSAL": "Neues Angebot",    
+    "PRODUCT_NAME": "Produkt",
+    "POLICY_HOLDER": "Versicherungsnehmer",
+    "INVOICE_RECIPIENT": "Rechnungsempfänger",
+    "ADMINISTRATIVE_DATA": "Verwaltungsdaten",
+    "CONTRACT_START": "Vertragsbeginn",
+    "AUTOMATIC_RENEWAL": "Automatische Vertragsverlängerung",
+    "CONTRACT_DURATION": "Vertragsdauer",
+    "CONTRACT_VERSION_VALIDITY": "Vertragsstand Gültigkeit",
+    "CONTRACT_VERSION_CREATED": "Vertragsstand erstellt",
+   
+    "POLICY_NUMBER": "Policennummer",
+    
+    "SUMMARY": "Zusammenfassung",
+    
+    "CONTRACT_SALES_PRODUCT": "Vertragsbündel",
+    "CONTRACT_PRODUCT": "Produkt",
+    "CONTRACT_BASIC_PRODUCT": "Produktbaustein",
+    "CONTRACT_DATA": "Vertragsdaten",
+    "CONTRACT_BASIC_PRODUCTS": "Produktbausteine", 
+    "CONTRACT_CONTRACT_MODULE": "Vertragsbaustein",
+    "CONTRACT_CONTRACT_MODULES": "Vertragsbausteine",
+    "CONTRACT_CONTRACT_MODULE_SHORT": "Baustein",
+    "CONTRACT_DATA_TO_CALCULATE_RISK_EXTENDED": "Daten zur Risikobewertung",
+    "CONTRACT_DATA_TO_CALCULATE_RISK": "Risikobewertung",
+    "CONTRACT_EXTENDED_DATA_TO_CALCULATE_RISK": "Erweiterte Daten zur Risikobewertung",
+    "CONTRACT_ATTRIBUTES": "Eigenschaften",
+    "CONTRACT_PAYMENT_FREQUENCY": "Zahlweise",
+    "CONTRACT_DURATION_INFO": "{{months}} Monate",
+    "CONTRACT_RENEWAL_INFO": "(automatische Vertragsverlängerung {{days}} Tage vor Vertragsende)",
+    "CONTRACT_NO_RENEWAL_INFO": "(ohne automatische Vertragsverlängerung)",
+
+
+    "PREMIUM_DATA": "Prämie",
+    "PREMIUM_OVERVIEW": "Prämienübersicht",
+    "PREMIUM_GROSS": "Brutto",
+    "PREMIUM_NET": "Netto", 
+    "PREMIUM_TAX": "Steuer",
+    "PREMIUM_REFRESH": "Neuberechnung",
+    "PREMIUM_TOTAL": "Gesamt",
+
+    "CONTRACT_PAYMENT_ANNUAL": "Jährliche Zahlweise",
+    "CONTRACT_PAYMENT_SEMIANNUAL": "Halbjährliche Zahlweise",
+    "CONTRACT_PAYMENT_QUARTERLY": "Vierteljährliche Zahlweise",
+    "CONTRACT_PAYMENT_MONTHLY": "Monatliche Zahlweise",
+
+    "CONTRACT_ANNUAL_PREMIUM": "Jahresprämie",
+
+    "CONTRACT_CLAIMS": "Schäden",
+    "CONTRACT_CLAIMNUMBER": "Schadennummer",
+    "CONTRACT_DATE_OF_LOSS": "Schadentag",
+    "CONTRACT_CLAIM_STATUS": "Status",
+    "CONTRACT_CLAIMS_CURRENT_AMOUNT_OF_LOSS": "Aktuelle Schadenhöhe",
+    "BUTTON_CONTRACT_NEW_CLAIM": "Neuer Schaden",
+ 
+    "INVOICE_RECIPIENT_IS_POLICY_HOLDER": "Rechnungsempfänger ist identisch mit Versicherungsnehmer",
+    "BUTTON_SAVE_DRAFT": "Angebotsentwurf speichern",
+    "BUTTON_ISSUE_PROPOSAL": "Angebot erstellen",
+    "BUTTON_ISSUE_POLICY": "Police ausstellen",
+    "BUTTON_CANCEL": "Abbrechen",
+    "BUTTON_DEBUG": "Debug",
+    
+    "ACTION_BTN_NEXT_CV_TITLE": "lade nächsten Vertragsstand", 
+    "ACTION_BTN_FIRST_CV_TITLE": "Erster Vertragsstand", 
+    "ACTION_BTN_PREV_CV_TITLE": "lade vorherigen Vertragsstand", 
+    "ACTION_BTN_LATEST_CV_TITLE": "Letzter Vertagsstand",
+    "ACTION_BTN_TODAY": "Heute",
+    "ACTION_BTN_TODAY_TITLE": "lade Vertragsstand zum heutigen Tag",
+    
+    "JOURNAL_ISSUE_DATE": "Bearbeitet am",
+    "JOURNAL_CREATOR": "von",
+    "JOURNAL_DESCRIPTION": "Grund",
+    "JOURNAL_VALID_FROM": "gültig ab",
+    "JOURNAL_PROCESS": "Details",
+    "JOURNAL_CONTRACT_VERSION": "betroffene Vertragsversion",
+    "JOURNAL_MODULE": "Komponente",
+    
+    
+    "JRNL_ENDORSEMENT": "Nachtrag",
+    "JRNL_ISSUE_POLICY": "Vertragsanlage",    
+    "JRNL_PORTFOLIO": "Bestand",
+    "JRNL_ICE": "Prozess",
+    "JRNL_BUSINESS_PARTNER": "Business Partner",
+    "JRNL_BP_CREATE": "Anlage Business Partner",
+    "JRNL_BP_MODIFY": "Änderung Business Partner",
+    "JRNL_BP_LINK": "Verknüpfung Business Partner",
+    "JRNL_POLICYHOLDER": "Versicherungsnehmer", 
+    "JRNL_INVOICERECIPIENT": "Rechnungsempfänger",
+    "JRNL_CREATE_POLICY_DOC": "Police erzeugt",
+
+    
+    "DOCS_DOCS": "Dokumente",
+    "DOCS_NAME": "Name",
+    "DOCS_ADDED_AT": "Hinzugefügt am",
+    "DOCS_ADDED_FROM": "von",
+    
+    
+    "YES": "Ja",
+    "NO": "Nein",
+
+    "test": "blub"
+}
