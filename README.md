@@ -25,6 +25,9 @@ The challeange for material design: form focused application (many input fields,
 
 *[nok]: material design meets not my expectation for formular focused applications with many input fields.*
 
+
+## Setup 
+
 PRE install
 
     bower install --save webcomponents/webcomponentsjs
