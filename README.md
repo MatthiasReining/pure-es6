@@ -10,7 +10,8 @@ I'm curious to see when I'm running in restrictions.
 - routing
 - i18n *[ok]*
 
-The usage of ES6 should work without additional libraries like babel.js
+The usage of ES6 should work without translation libraries like babel.js.  
+For enabling ES6 functionality only polyfill should be used. With polyfill can be removed in an easy way as soon as all browsers supports the extended functionality (see https://www.webcomponents.org/polyfills/)
 
 - Chrome *[ok]*
 - Firefox *[ok]*
