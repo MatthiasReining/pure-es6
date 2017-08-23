@@ -54,7 +54,7 @@ function bootstrapApp() {
         i18n.en = data;
     });
 
-    mdc.autoInit();
+    //mdc.autoInit();
 }
 
 
@@ -78,7 +78,8 @@ function loadTemplate(resource, htmlElem) {
             tmplContainer.innerHTML = template2;
             htmlElem.innerHTML = template2;
 
-            mdc.autoInit();
+            //only for material design
+            //mdc.autoInit();
 
             //add T-Bindings   
             addTBindings();

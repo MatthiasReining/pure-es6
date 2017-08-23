@@ -7,14 +7,12 @@ class TInputCtrl extends HTMLElement {
 
         //XXX use global cache?
 
-        let template = `<div class="mdc-form-field">
-                <div class="mdc-textfield " data-mdc-auto-init="MDCTextfield">
-                    <input id="${this.def.model}" type="text" class="mdc-textfield__input" data-model="${this.def.model}">
-                    <label for="${this.def.model}" class="mdc-textfield__label">
-                        ${this.def.label}
-                    </label>
-                </div>
-            </div>`;
+        let template = `<div class="form-group row">
+            <label for="id-${this.def.model}" class="col-sm-2 col-form-label">${this.def.label}</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="id-${this.def.model}" placeholder="${this.def.label}">
+            </div>
+        </div>`;
 
         this.innerHTML = template;
         addTBindings(this);

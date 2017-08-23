@@ -1,5 +1,6 @@
 /** old stuff */
 
+/** material design - not longer used
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
 body{
@@ -15,10 +16,6 @@ input{
   color: red!important;
 }
 
-
-
-
-/* component */
 header .mdc-toolbar__title:first-child {
   margin-left: 24px;
 }
@@ -28,4 +25,9 @@ header .mdc-toolbar__title {
 header .mdc-toolbar__title a {
   text-decoration-line: none;
   color: white;
+}
+*/
+
+body > header {
+  min-height: 57px;
 }

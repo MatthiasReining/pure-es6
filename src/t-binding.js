@@ -6,7 +6,10 @@ function updateUI(el) {
 
     let dataBind = el.querySelectorAll('[data-model], [data-def]');
 
-    dataBind.forEach(htmlElem => {
+     //use for loop instead of foreach / only for Edge
+    //see https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10638731/
+    for(let i=0; i<dataBind.length; i++) {
+        let htmlElem = dataBind[i];
         let modelPath = htmlElem.getAttribute("data-model");
         if (modelPath == undefined) {
             console.log(htmlElem);
@@ -25,7 +28,7 @@ function updateUI(el) {
                 val = JSON.stringify(val, null, "  ");
             htmlElem.innerText = val;
         }
-    });
+    };
 }
 
 function addTBindings(el) {
@@ -33,10 +36,12 @@ function addTBindings(el) {
         el = document;
     let dataBind = el.querySelectorAll('[data-model], [data-def]');
 
-    dataBind.forEach(function (htmlElem) {
-        //console.log('add binding for ' + htmlElem.getAttribute('data-model'));
+    //use for loop instead of foreach / only for Edge
+    //see https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10638731/
+    for(let i=0; i<dataBind.length; i++) {
+        let htmlElem = dataBind[i];
         addTBinding(htmlElem);
-    });
+    }
 }
 
 function addTBinding(el) {

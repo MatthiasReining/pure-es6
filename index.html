@@ -1,69 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>PLAIN ES6. Web components and Shadow DOM</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
-    <!--
-    <script src="bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>    
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
--->
-
-    <!--
-    <script src="bower_components/shadycss/scoping-shim.min.js"></script>
-    <script src="bower_components/shadycss/apply-shim.min.js"></script>
-    <script src="bower_components/shadycss/custom-style-interface.min.js"></script>
--->
-    
-<!--    <script src="bower_components/custom-elements/custom-elements.min.js"></script>-->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+        integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="style.css">
-
-
-    <!--<link rel="import" href="t-input-ctrl.html">-->
-    <!--<link rel="import" href="t-output-ctrl.html">-->
-
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
 </head>
 
 
-<body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--fixed-lastrow-only">
-        <div class="mdc-toolbar__row">
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                <!--<a href="#" class="material-icons mdc-toolbar__icon--menu">menu</a> -->
-                <span class="mdc-toolbar__title"><a href="#"><i class="material-icons">home</i></a></span>
-                <span class="mdc-toolbar__title"><a href="#">insurance11</a></span>
-                <span class="mdc-toolbar__title"><i class="material-icons">chevron_right</i></span>
-                <span class="mdc-toolbar__title"><a href="#">demo</a></span>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 
-            </section>
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-                <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
-                <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Print this page" alt="Print this page">print</a>
-                <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">more_vert</a>
-            </section>
-        </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><span class="oi oi-home"></span> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="oi oi-chevron-right"></span> insurance11</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="oi oi-chevron-right"></span> demo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <br><br><br><br><br>
+
     <button onclick="bootstrapApp()">bootstrapApp</button>
     <main id="main">loading...</main>
 
     <hr>
     <pre data-model=""></pre>
 
-    
-<!--
+
+    <!--
     <script src="src/jsonpath.js"></script>
     <script src="src/t-binding.js"></script>
     <script src="src/t-input-ctrl.js"></script>

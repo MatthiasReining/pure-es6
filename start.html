@@ -1,12 +1,10 @@
-<hr>
-
-
 <h1>Plain ES6, no frameworks or libs</h1>
 
 <h2>T-Rendering</h2>
 <input type="text" data-model="bp.firstname"><br>
 <label>Firstname (T-OUTPUT):</label>
 <t-output data-model="bp.firstname" id="outTest"></t-output><br>
+
 <label>Firstname:</label><span data-model="bp.firstname"></span><br>
 <button onclick="state.model.bp.firstname='Mickey';updateUI()">update firstname</button>
 <hr>
@@ -31,7 +29,6 @@
 
 <hr>
 <h2>T-INPUT-CTRL</h2>
-
 
 <t-input-ctrl data-def='{"label": "Firstname", "model": "bp.firstname"}' id="inputTest"></t-input-ctrl>
 <t-input-ctrl def='{"model": "test1"}'></t-input-ctrl>
