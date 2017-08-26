@@ -3,12 +3,35 @@ I'm curious to see when I'm running in restrictions.
 
 ## Topics: 
 
-- two-way-value binding *[ok]*
+- two-way-data binding *[ok]*
 - central state *[ok]*
 - templating *[ok]*
 - modular project structure
 - routing
-- i18n *[ok]*
+- i18n 
+
+### two-way-data binding
+
+see t-binding.js
+
+### central state
+
+in init.js global variable *state*
+
+### templating
+
+init.js#loadTemplate 
+
+### modular project structure
+
+### routing
+
+### i18n
+
+init.js#transl()
+
+
+## Browsers
 
 The usage of ES6 should work without translation libraries like babel.js.  
 For enabling ES6 functionality only polyfill should be used. With polyfill can be removed in an easy way as soon as all browsers supports the extended functionality (see https://www.webcomponents.org/polyfills/)

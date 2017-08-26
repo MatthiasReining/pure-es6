@@ -34,6 +34,11 @@
 <t-input-ctrl def='{"model": "test1"}'></t-input-ctrl>
 <t-input-ctrl data-def='{"label": "Lastname", "model": "bp.lastname"}'></t-input-ctrl>
 
+<hr> i18n Test:<br> ${transl('CONTRACT_DATA_TO_CALCULATE_RISK_EXTENDED')}
+
+<br> ${i18n().nf(12345.1234, 2)}<br> ${i18n().nf(12345.1234)} <br> ${i18n().nf(12345.1234567)}
+<br>
+<hr> ${i18n().df(new Date(), {'timeZoneName':'short'})}
 <hr>
 <h1>CONTENT-AREA</h1>
 <button onclick="renderContract()">render Contract</button>

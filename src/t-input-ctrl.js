@@ -21,8 +21,8 @@ class TInputCtrl extends HTMLElement {
         if (modelPath == undefined)
             modelPath = this.def.model;
         this.value = jsonPath.getValue(modelPath);
-        console.log('t-input-ctrl');
-        console.log(this);
+        //console.log('t-input-ctrl');
+        //console.log(this);
 
         /*
                 let template = currentDocument.querySelector('template');

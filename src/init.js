@@ -5,7 +5,7 @@ var state = {
     "model": { "title": "Shadow DOM", "owner": "test3", "v1": "key2" }
 };
 var jsonPath = new JsonPath(state.model);
-var i18n = {};
+var i18nMessages = {};
 
 (function () {
 
@@ -45,16 +45,44 @@ function bootstrapApp() {
         console.log('error... ' + error.message);
     })
 
+    loadLanguages();
+}
+
+function loadLanguages() {
     //load i18n
-    console.log('load i18n');
-    fetch('contract_de.json').then((resp) => resp.json()).then(function (data) {
-        i18n.de = data;
-    });
-    fetch('contract_en.json').then((resp) => resp.json()).then(function (data) {
-        i18n.en = data;
+    state.lang = {
+        'availableLanguages': ['de', 'en'],
+        'fallback': 'de'
+    };
+
+    //load default language
+    if (state.lang.availableLanguages.indexOf(navigator.language) > -1)
+        state.lang.current = navigator.language;
+    else if (state.lang.availableLanguages.indexOf(navigator.language.split['_'][0]) > -1)
+        state.lang.current = navigator.language.split['_'][0];
+    else
+        state.lang.current = 'de'; //default value
+    console.log('set language to ' + state.lang.current);
+
+    loadLanguage(state.lang.current);
+}
+
+function loadLanguage(lang) {
+    //TODO change
+    let tmpCurrency = "EUR";
+    //load default language
+    if (state.lang.availableLanguages.indexOf(lang) > -1) {
+        state.lang.current = lang;
+        state.lang.i18nFormatter = new TI18nFormatter(lang, tmpCurrency);
+    } else {
+        console.log('Language ' + lang + ' is not available');
+        return;
+    }
+    fetch('contract_' + state.lang.current + '.json').then((resp) => resp.json()).then(function (data) {
+        i18nMessages[state.lang.current] = data;
     });
 
-    //mdc.autoInit();
+
 }
 
 
@@ -123,13 +151,10 @@ function sce(data) {
 
 
 function transl(key) {
-    console.log(navigator.language);
-    let lang = navigator.language;
-    if (!i18n.hasOwnProperty(lang)) {
-        console.log('use default lang de');
-        lang = 'de';
-    }
+    return i18nMessages[state.lang.current][key];
+}
 
-    return i18n[lang][key];
+function i18n() {
+    return state.lang.i18nFormatter;
 }
 
