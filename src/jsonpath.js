@@ -18,7 +18,7 @@ class JsonPath {
             }
         });
         let fullPath = "this.model" + path;
-        console.log(' path : ' + path);
+        //console.log(' path : ' + path);
         let val = eval('this.model' + path);
 
         return val;

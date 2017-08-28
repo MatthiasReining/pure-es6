@@ -9,6 +9,8 @@ var i18nMessages = {};
 
 (function () {
 
+    
+
     const supportsCustomElementsV1 = 'customElements' in window;
     const supportsShadowDOMV1 = !!HTMLElement.prototype.attachShadow;
 
@@ -34,21 +36,50 @@ var i18nMessages = {};
 function bootstrapApp() {
     //load product
     console.log('load product');
-    fetch('test-product.json').then((resp) => resp.json()).then(function (data) {
+    var p1 = fetch('test-product.json').then((resp) => resp.json()).then(function (data) {
         console.log(data);
         state.modelDef = data;
         console.log(state);
 
-        loadTemplate('start.html', document.querySelector('main'));
+        //loadTemplate('start.html', document.querySelector('main'));
     }).catch(function (error) {
         console.log(error);
         console.log('error... ' + error.message);
     })
 
-    loadLanguages();
-    initRouter();
+    var p2 = loadLanguages();
+    
+    Promise.all([p1, p2]).then(e => {
+        initRouter2();
+        router();
+    });
+
+
 }
 
+
+function initRouter2() {
+    route('/', 'home', function () {
+        home();
+    });
+    route('/contract', 'template1', function () {
+        renderContract();
+        console.log('in contract');
+    });
+    route('/page2', 'template2', function () {
+        this.heading = 'I\'m page two!';
+        console.log('in page2');
+    });
+
+
+    // Listen on hash change:
+    window.addEventListener('hashchange', router);
+    // Listen on page load:
+    window.addEventListener('load', router);
+    console.log('router initalized1');
+
+
+}
 function initRouter() {
     // configuration
     //Router.config({ mode: 'history' });
@@ -81,7 +112,12 @@ function initRouter() {
     Router.check();
 
     // forwarding
-    Router.navigate('/');
+    //Router.navigate('/');
+
+    // Listen on hash change:
+    window.addEventListener('hashchange', Router.check());
+    // Listen on page load:
+    window.addEventListener('load', Router.check());
 
 }
 
@@ -93,15 +129,21 @@ function loadLanguages() {
     };
 
     //load default language
-    if (state.lang.availableLanguages.indexOf(navigator.language) > -1)
+    let navLang = navigator.language;
+    if (navLang.indexOf('-'))
+        navLang = navLang.split('-')[0];
+    if (navLang.indexOf('_'))
+        navLang = navLang.split('_')[0];
+
+    if (state.lang.availableLanguages.indexOf(navigator.language) > -1) //check lang and locale
         state.lang.current = navigator.language;
-    else if (state.lang.availableLanguages.indexOf(navigator.language.split['_'][0]) > -1)
-        state.lang.current = navigator.language.split['_'][0];
+    else if (state.lang.availableLanguages.indexOf(navLang) > -1) //check only lang
+        state.lang.current = navLang;
     else
         state.lang.current = 'de'; //default value
     console.log('set language to ' + state.lang.current);
 
-    loadLanguage(state.lang.current);
+    return loadLanguage(state.lang.current);
 }
 
 function loadLanguage(lang) {
@@ -115,7 +157,7 @@ function loadLanguage(lang) {
         console.log('Language ' + lang + ' is not available');
         return;
     }
-    fetch('contract_' + state.lang.current + '.json').then((resp) => resp.json()).then(function (data) {
+    return fetch('contract_' + state.lang.current + '.json').then((resp) => resp.json()).then(function (data) {
         i18nMessages[state.lang.current] = data;
     });
 
@@ -195,3 +237,6 @@ function i18n() {
     return state.lang.i18nFormatter;
 }
 
+function home() {
+    loadTemplate('start.html', document.querySelector('main'));
+}
