@@ -26,6 +26,8 @@ init.js#loadTemplate
 
 ### routing
 
+see http://krasimirtsonev.com/blog/article/A-modern-JavaScript-router-in-100-lines-history-api-pushState-hash-url
+
 ### i18n
 
 init.js#transl()

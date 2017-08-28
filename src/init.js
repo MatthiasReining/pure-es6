@@ -46,6 +46,43 @@ function bootstrapApp() {
     })
 
     loadLanguages();
+    initRouter();
+}
+
+function initRouter() {
+    // configuration
+    //Router.config({ mode: 'history' });
+    Router.config({ mode: 'hash' });
+
+    // returning the user to the initial state
+    //Router.navigate();
+
+    // adding routes
+    Router
+        .add(/contract\/?$/, function () {
+            console.log('router contract 2');
+            renderContract();
+        })
+        .add(/contract/, function () {
+            console.log('router contract');
+            renderContract();
+        })
+        .add(/products\/(.*)\/edit\/(.*)/, function () {
+            console.log('products', arguments);
+        })
+        .add(function () {
+            console.log('router default');
+        })
+        .check('/products/12/edit/22').listen();
+
+    Router.check('/contract').listen();
+    Router.check('/contract/').listen();
+    Router.check('/').listen();
+    Router.check();
+
+    // forwarding
+    Router.navigate('/');
+
 }
 
 function loadLanguages() {
@@ -73,7 +110,7 @@ function loadLanguage(lang) {
     //load default language
     if (state.lang.availableLanguages.indexOf(lang) > -1) {
         state.lang.current = lang;
-        state.lang.i18nFormatter = new TI18nFormatter(lang, tmpCurrency);
+        state.lang.i18nFormatter = new TL10nFormatter(lang, tmpCurrency);
     } else {
         console.log('Language ' + lang + ' is not available');
         return;

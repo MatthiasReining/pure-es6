@@ -1,4 +1,4 @@
-class TI18nFormatter {
+class TL10nFormatter {
 
     constructor(lang, currency) {
         this.lang = lang;
